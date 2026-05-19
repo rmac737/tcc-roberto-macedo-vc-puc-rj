@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="appTest/appTest.csproj" />
+  <Project Path="ICAONet/ICAONet.csproj" />
+</Solution>

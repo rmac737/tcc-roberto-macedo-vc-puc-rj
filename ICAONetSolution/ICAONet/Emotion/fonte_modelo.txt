@@ -1,0 +1,1 @@
+https://github.com/sb-ai-lab/EmotiEffLib/blob/main/models/affectnet_emotions/onnx/enet_b2_8.onnx

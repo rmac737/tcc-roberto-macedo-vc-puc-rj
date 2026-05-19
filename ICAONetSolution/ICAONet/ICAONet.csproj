@@ -1,0 +1,71 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <IsAotCompatible>True</IsAotCompatible>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <IsAotCompatible>True</IsAotCompatible>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="BackgroundRemover\rvm_resnet50.onnx" />
+    <None Remove="Emotion\enet_b2_8.onnx" />
+    <None Remove="FaceDetection\deploy.prototxt" />
+    <None Remove="FaceDetection\res10_300x300_ssd_iter_140000.caffemodel" />
+    <None Remove="FaceMatch\glintr100.onnx" />
+    <None Remove="GazeEstimation\resnet34_gaze.onnx" />
+    <None Remove="GlassDetection\glass_no_glass.onnx" />
+    <None Remove="HeadCoverDetection\head_cover.onnx" />
+    <None Remove="HeadPose\sixdrepnet.onnx" />
+    <None Remove="ImageQuality\focused_no_focused.onnx" />
+    <None Remove="ImageQuality\pixeled_no_pixeled.onnx" />
+    <None Remove="Landmarks\face_mesh_Nx3x192x192_post.onnx" />
+    <None Remove="MakeUpDetection\make_up.onnx" />
+    <None Remove="RedEyes\red_no_red.onnx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Lib\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Clipper2" Version="1.5.4" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.9" />
+    <PackageReference Include="Microsoft.Extensions.ObjectPool" Version="9.0.9" />
+    <PackageReference Include="Microsoft.ML.OnnxRuntime" Version="1.22.1" />
+    <PackageReference Include="OpenCvSharp4" Version="4.11.0.20250507" />
+    <PackageReference Include="OpenCvSharp4.Extensions" Version="4.11.0.20250507" />
+    <PackageReference Include="SixLabors.ImageSharp" Version="3.1.11" />
+    <PackageReference Include="SixLabors.ImageSharp.Drawing" Version="2.1.7" />
+    <PackageReference Include="SkiaSharp" Version="3.119.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="BackgroundRemover\rvm_resnet50.onnx" />
+    <EmbeddedResource Include="Emotion\enet_b2_8.onnx" />
+    <EmbeddedResource Include="FaceDetection\deploy.prototxt">
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaceDetection\res10_300x300_ssd_iter_140000.caffemodel">
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaceMatch\glintr100.onnx" />
+    <EmbeddedResource Include="GazeEstimation\resnet34_gaze.onnx" />
+    <EmbeddedResource Include="GlassDetection\glass_no_glass.onnx">
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeadCoverDetection\head_cover.onnx" />
+    <EmbeddedResource Include="HeadPose\sixdrepnet.onnx" />
+    <EmbeddedResource Include="ImageQuality\focused_no_focused.onnx" />
+    <EmbeddedResource Include="ImageQuality\pixeled_no_pixeled.onnx" />
+    <EmbeddedResource Include="Landmarks\face_mesh_Nx3x192x192_post.onnx" />
+    <EmbeddedResource Include="MakeUpDetection\make_up.onnx" />
+    <EmbeddedResource Include="RedEyes\red_no_red.onnx" />
+  </ItemGroup>
+
+</Project>
